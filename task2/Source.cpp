@@ -22,7 +22,7 @@ int main() {
 	int number;
 	int isPrime = 1;
 
-	number = GetInt("Введите число: ");
+	number = GetInt("Введите число не меньшее 2: ");
 
 	// Проверка числа на простоту
 	_asm {
