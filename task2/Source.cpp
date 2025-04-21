@@ -19,7 +19,7 @@ int main() {
 	cout << taskInfo << endl;
 	cout << endl;
 
-	int number;
+	unsigned int number;
 	int isPrime = 1;
 
 	number = GetInt("Введите число не меньшее 2: ");

@@ -33,7 +33,8 @@ int main() {
 	secondOperand = GetInt("Введите второй операнд: ");
 
 	// Сложение
-	_asm {
+	_asm 
+	{
 		MOV EAX, firstOperand
 		MOV EBX, secondOperand
 		ADD EAX, EBX
@@ -42,7 +43,8 @@ int main() {
 	cout << firstOperand << " + " << secondOperand << " = " << sum << endl;
 
 	// Вычитание
-	_asm {
+	_asm
+	{
 		MOV EAX, firstOperand
 		MOV EBX, secondOperand
 		SUB EAX, EBX
@@ -51,7 +53,8 @@ int main() {
 	cout << firstOperand << " - " << secondOperand << " = " << sub << endl;
 
 	// Умножение
-	_asm {
+	_asm 
+	{
 		MOV EAX, firstOperand
 		MOV EBX, secondOperand
 		IMUL EAX, EBX
@@ -60,13 +63,14 @@ int main() {
 	cout << firstOperand << " * " << secondOperand << " = " << prod << endl;
 
 	// Целочисленное деление с остатком
-	_asm {
-		mov eax, firstOperand
-		mov ebx, secondOperand
-		cdq
-		idiv ebx
-		mov div, eax
-		mov remain, edx
+	_asm 
+	{
+		MOV EAX, firstOperand
+		MOV EBX, secondOperand
+		CDQ
+		IDIV EBX
+		MOV div, EAX
+		MOV remain, EDX
 	}
 	cout << firstOperand << " / " << secondOperand << " = " << div << endl;
 	cout << "Остаток от деления: " << remain << endl;
