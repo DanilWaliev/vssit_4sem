@@ -37,13 +37,16 @@ int main() {
 			CMP EDX, 0				// Сравниваем остаток от деления с 0
 			JNZ prenext				// Если флаг нуля не равен нулю (остаток не равен нулю), переходим к prenext
 			MOV isPrime, 0			// Если флаг нуля равен нулю
-
+			JMP exitCode
 		// Подготовка к очередной итерации
 		prenext:
 			INC EBX					// Инкремент EBX
 			CMP EBX, number			// Сравниваем EBX с числом, которое проверяем на простоту
 			JNZ nextIteration		// Если флаг нуля не равен нулю переход к nextIteration
-	}
+
+		exitCode:
+			; // Выход из программы
+	}		
 
 	if (isPrime)
 	{
