@@ -13,7 +13,6 @@ int main() {
 
 	initialArray = new int[numberOfElements];
 
-	// переделать
 	for (i = 0; i < numberOfElements; i++) {
 		initialArray[i] = GET_RANDOM();
 	}
