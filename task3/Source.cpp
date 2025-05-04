@@ -3,7 +3,8 @@ using namespace std;
 extern "C" int MODIFY_ARRAY(int*, int);
 extern "C" int GET_RANDOM();
 
-int main() {
+int main() 
+{
 	setlocale(LC_CTYPE, "Russian");
 	int* initialArray = nullptr;
 	int i = 0, numberOfReplaces = 0, numberOfElements = 0;
